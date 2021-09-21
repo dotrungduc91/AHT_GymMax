@@ -7,7 +7,8 @@
         &-inner {
             display: flex;
             flex-wrap: wrap;
-
+            box-sizing: border-box;
+            filter: drop-shadow(0 0 5px rgba(0,0,0,0.3));
             .strength-item {
                 width: 33.3333%;
                 display: flex;
@@ -27,6 +28,8 @@
                 .icon {
                     display: flex;
                     justify-content: center;
+                    min-height: 70px;
+                    align-items: end;
                     img {
                         display: block;
                     }
@@ -52,7 +55,7 @@
 // PRODUCT
     // TABS
     .product {
-        margin-top: 92px;
+        margin-top: 91px;
     }
     .product-tab.ui-widget.ui-widget-content {
         border: none;
@@ -118,10 +121,10 @@
     .product-item {
         cursor: pointer;
         .col(25%);
-        
+        margin-bottom: 30px;
         .product-item-inner {
             position: relative;
-           padding-bottom: 45px;
+            padding-bottom: 32px;
             text-align:left;
             .product-image {
                 text-align: center;
@@ -160,7 +163,8 @@
                         display: block;
                         width: 34px;
                         height: 34px;
-                        border-radius: 5px;
+                        border-top-left-radius: 5px;
+                        border-bottom-right-radius: 5px;
                         background-color: @white-backgound-color;
                         line-height: 34px;
                         text-align: center;
@@ -182,11 +186,16 @@
                         }
                 }
             }
+            &:hover {
+                //  filter: drop-shadow(0 0 5px rgba(0,0,0,0.3));
+                   -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.3);
+                   -moz-box-shadow: 0 0 5px rgba(0,0,0,0.3);
+                   box-shadow: 0 0 5px rgba(0,0,0,0.3);
+            }
         }
         &:hover {
             .product-icon {
                 display: block;
-   
             }
         }
     }
@@ -195,7 +204,7 @@
 
 // ABOUT US SLIDER
 .about-us {
-    margin-top: 59px;
+    margin-top: 56px;
     .about-us-slider {
         .slick-prev {
             left: 50px;

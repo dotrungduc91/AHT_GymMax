@@ -43,6 +43,9 @@
                         padding-left: 26px;
                         a {
                             color: @white-text-color;
+                            &:hover {
+                                color : #dd2f31;
+                            }
                         }
                     }
                 }
@@ -52,27 +55,37 @@
             }
         }
         .menu-icon {
-            margin-top: 2px;
+            margin-top: 9px;
             display: flex;
 
             .search-icon {
                 padding-left: 41px;
-                i {
+                a {
+                    i {
                     padding-right: 25px;
+                    color: @white-text-color;
+                    }
                 }
             }
             
             .cart-icon {
-                i {
-                    border-right: 1px solid #808080;
-                    border-left: 1px solid #808080;
-                    padding: 0 29px;
+                a {
+                    i {
+                        border-right: 1px solid #808080;
+                        border-left: 1px solid #808080;
+                        padding-right: 29px;
+                        padding-left: 26px;
+                        color: @white-text-color;
+                    }
                 }
             }
 
             .user-icon {
-                i {
-                padding-left: 26px;
+                a {
+                    i {
+                      padding-left: 26px;
+                      color: @white-text-color;
+                    }
                 }
             }
         }
